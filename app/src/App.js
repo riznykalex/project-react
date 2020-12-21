@@ -4,24 +4,36 @@ import Container1 from './containers/container1';
 
 class App extends Component  {
 
+renderFunction1 = () => {
+  if (true) {
+    return (
+      <div>
+      Condition 1
+      </div>
+    )
+  }
+  else {
+    return (
+    <div>
+    Condition 2
+    </div>
+  )}
+}
 
   render() {
-
-    const var1 = {
-      key1: 'Some Data'
-    }
     return (
       <div className="App">
-
           React
-          <Container1 nickname="Mo" />
-          <Component1 name="moe" age= {25} />
+          <div>
+          Div 1
+          </div>
 
+          <div>
+          Div 2
+          </div>
+          {this.renderFunction1()}
       </div>
-    );
-  }
-
-
-  }
+    )}
+}
 
 export default App;
